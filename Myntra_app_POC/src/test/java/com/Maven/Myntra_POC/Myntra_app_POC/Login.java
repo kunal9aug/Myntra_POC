@@ -50,6 +50,7 @@ public class Login {
 	@When("^User clicks the Login button and enters \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void user_clicks_the_Login_button_and_enters_and(String username, String password) throws Exception {
 		driver.findElementByXPath("//android.view.ViewGroup[@content-desc="+'"'+"leftElement"+'"'+"]/android.widget.TextView").click();
+		Thread.sleep(5000);
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.support.v4.widget.DrawerLayout/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup/android.widget.HorizontalScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup").click();
 		driver.findElementById("com.myntra.android:id/et_email_or_phone").sendKeys(username);
 		driver.findElementById("com.myntra.android:id/et_loginregister_password").sendKeys(password);
@@ -61,6 +62,13 @@ public class Login {
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.support.v4.widget.DrawerLayout/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup/android.widget.HorizontalScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup").click();
 		String Name=driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView").getText();
 	    Assert.assertEquals(Name, "Demo");
+	}
+	
+	@Then("^A message is shown saying Incorrect User id and password$")
+	public void a_message_is_shown_saying_Incorrect_User_id_and_password() throws Exception {
+	    String ErrorMessage=driver.findElementById("com.myntra.android:id/sb__text").getText();
+	    System.out.println(ErrorMessage);
+	    Assert.assertEquals("Incorrect user id or password", ErrorMessage);
 	}
 
 }
