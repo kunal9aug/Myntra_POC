@@ -7,7 +7,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features={"Features/Login.feature"},
+@CucumberOptions(features={"Features"},//"Features/Login.feature"
 plugin={"html:Reports/rep.html"},
 monochrome=true,
 glue= {"com.Maven.Myntra_POC.Myntra_app_POC"})

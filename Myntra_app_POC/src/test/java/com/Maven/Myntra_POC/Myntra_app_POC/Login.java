@@ -19,8 +19,9 @@ import junit.framework.Assert;
 public class Login {
 	AndroidDriver<WebElement> driver;
 	
-	@Before
+	@Before("@Login")
 	public void SetUp() throws MalformedURLException {
+		System.out.println("Before method executed");
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
 		dc.setCapability(MobileCapabilityType.DEVICE_NAME, "NDD4C18926014588");
@@ -36,8 +37,9 @@ public class Login {
 		
 	}
 	
-	@After
+	@After("@Login")
 	public void TearDown() {
+		System.out.println("After method executed");
 		driver.quit();
 	}
 	

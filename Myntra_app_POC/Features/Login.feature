@@ -9,7 +9,6 @@ Feature: Login on Myntra App
     Examples: 
       | username               |password  |
       | Rashikas331@gmail.com  | Demo@123 |
-      #| Abcd@yahoo.com         | abcd@123 |
 
    Scenario Outline: Login Failure with Invalid Credentials
   	Given User is on Myntra Home Page
