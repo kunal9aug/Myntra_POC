@@ -1,4 +1,4 @@
-package com.Maven.Myntra_POC.Myntra_app_POC;
+package steps;
 
 import java.net.MalformedURLException;
 import java.sql.Driver;

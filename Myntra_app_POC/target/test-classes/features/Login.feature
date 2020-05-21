@@ -10,6 +10,8 @@ Feature: Login on Myntra App
       | username               |password  |
       | Rashikas331@gmail.com  | Demo@123 |
 
+
+	@Login
    Scenario Outline: Login Failure with Invalid Credentials
   	Given User is on Myntra Home Page
     When User clicks the Login button and enters "<username>" and "<password>"
