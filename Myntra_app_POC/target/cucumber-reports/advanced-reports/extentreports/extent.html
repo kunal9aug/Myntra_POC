@@ -36,7 +36,7 @@
 		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
 	</script>
 </head>
-	<body class='extent dark default hide-overflow bdd-report'>
+	<body class='extent standard default hide-overflow bdd-report'>
 		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
 			<span><i class='material-icons'>desktop_windows</i></span>
 		</div>
@@ -57,7 +57,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>May 21, 2020 07:06:36 PM</span>
+			<span class='label blue darken-3 suite-start-time'>May 24, 2020 12:11:51 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -127,10 +127,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='33.333%'><span class='strong'>1</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='66.667%'>2</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -141,10 +141,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>2</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='40%'><span class='strong'>2</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>2</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='60%'>3</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -157,12 +157,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>9</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>12</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='16.667%'>2</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='8.333%'>1</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='8.333%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='18.75%'>3</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='6.25%'>1</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='6.25%'>0</span> others
                 </div>
             </div>
         </div>
@@ -183,7 +183,7 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Login on Myntra App</span>
-						<span class='test-time'>May 21, 2020 07:08:17 PM</span>
+						<span class='test-time'>May 24, 2020 12:12:27 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -197,7 +197,7 @@
 	<div class='category-list'>
 		<span class='category label'>@Login</span>
 	</div>
-	<span class='duration right label'>0h 0m 22s+29ms</span>
+	<span class='duration right label'>0h 0m 29s+414ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Successful login with Valid Credentials</div>
 		<table class='runtime-table table-striped table'><tr><td>username</td><td>password</td></tr><tr><td>Rashikas331@gmail.com</td><td>Demo@123</td></tr></table>
@@ -226,7 +226,7 @@
 	<div class='category-list'>
 		<span class='category label'>@Login</span>
 	</div>
-	<span class='duration right label'>0h 1m 25s+372ms</span>
+	<span class='duration right label'>0h 1m 11s+248ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Login Failure with Invalid Credentials</div>
 		<table class='runtime-table table-striped table'><tr><td>username</td><td>password</td></tr><tr><td>xyz@outlook.com</td><td>Razz@123</td></tr><tr><td>Abcd@yahoo.com</td><td>abcd@123</td></tr></table>
@@ -245,7 +245,7 @@
 				</li>
 				<li test-id='14' class='gc then fail' status='fail'>
 					<h6 class="step-name" title="Login.a_message_is_shown_saying_Incorrect_User_id_and_password()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then A message is shown saying Incorrect User id and password</h6>
-					<textarea disabled class="code-block">junit.framework.ComparisonFailure: expected:<[Incorrect user id or password]> but was:<[Too many failed password attempts, please try after 7 minutes]>
+					<textarea disabled class="code-block">junit.framework.ComparisonFailure: expected:<[Incorrect user id or password]> but was:<[Too many failed password attempts, please try after 23 minutes]>
 	at junit.framework.Assert.assertEquals(Assert.java:100)
 	at junit.framework.Assert.assertEquals(Assert.java:107)
 	at steps.Login.a_message_is_shown_saying_Incorrect_User_id_and_password(Login.java:73)
@@ -261,16 +261,58 @@
 					<h6 class="step-name" title="Login.user_is_on_Myntra_Home_Page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is on Myntra Home Page</h6>
 					<div class="node-step"></div>
 				</li>
-				<li test-id='19' class='gc when fail' status='fail'>
-					<h6 class="step-name" title="Login.user_clicks_the_Login_button_and_enters_and(String,String)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>When User clicks the Login button and enters "Abcd@yahoo.com" and "abcd@123"</h6>
-					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+				<li test-id='19' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="Login.user_clicks_the_Login_button_and_enters_and(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When User clicks the Login button and enters "Abcd@yahoo.com" and "abcd@123"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='20' class='gc then fail' status='fail'>
+					<h6 class="step-name" title="Login.a_message_is_shown_saying_Incorrect_User_id_and_password()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then A message is shown saying Incorrect User id and password</h6>
+					<textarea disabled class="code-block">junit.framework.ComparisonFailure: expected:<[Incorrect user id or password]> but was:<[Too many failed password attempts, please try after 23 minutes]>
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at steps.Login.a_message_is_shown_saying_Incorrect_User_id_and_password(Login.java:73)
+	at ?.A message is shown saying Incorrect User id and password(file:src/test/resources/features/Login.feature:18)
+</textarea>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>Add to Cart functionality for Products listed in app</span>
+						<span class='test-time'>May 24, 2020 12:14:43 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenario node' test-id='23' status='fail'>
+	<span class='duration right label'>0h 1m 10s+271ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: User adds a Product to Bag</div>
+	</div>
+	<ul class='steps'>
+		<li test-id='24' class='node given pass' status='pass'>
+			<div class="step-name" title="AddToCart.user_is_Successfully_logged_into_the_application()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is Successfully logged into the application.</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='25' class='node when fail' status='fail'>
+			<div class="step-name" title="AddToCart.user_clicks_on_Add_to_Bag_for_a_Product()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>When User clicks on Add to Bag for a Product</div>
+			<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-2ITHABKP', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+System info: host: 'LAPTOP-2ITHABKP', ip: '192.168.42.130', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: C:\Users\kunal\eclipse-work..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, databaseEnabled: false, desired: {app: C:\Users\kunal\eclipse-work..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, deviceName: NDD4C18926014588, platformName: android, platformVersion: 10.0}, deviceApiLevel: 29, deviceManufacturer: HUAWEI, deviceModel: JSN-L42, deviceName: NDD4C18926014588, deviceScreenDensity: 480, deviceScreenSize: 1080x2340, deviceUDID: NDD4C18926014588, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 85, takesScreenshot: true, viewportRect: {height: 2052, left: 0, top: 85, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: a67478a8-04b3-41de-a64b-4d0629105f32
-*** Element info: {Using=id, value=com.myntra.android:id/et_email_or_phone}
+Capabilities {app: C:\Users\kunal\git\Myntra_a..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, databaseEnabled: false, desired: {app: C:\Users\kunal\git\Myntra_a..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, deviceName: NDD4C18926014588, platformName: android, platformVersion: 10.0}, deviceApiLevel: 29, deviceManufacturer: HUAWEI, deviceModel: JSN-L42, deviceName: NDD4C18926014588, deviceScreenDensity: 480, deviceScreenSize: 1080x2340, deviceUDID: NDD4C18926014588, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 85, takesScreenshot: true, viewportRect: {height: 2052, left: 0, top: 85, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: bd4f62ff-4937-42d4-aa93-44f5694cbed3
+*** Element info: {Using=xpath, value=(//android.widget.TextView[@content-desc="text_brand"])[1]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -289,28 +331,26 @@ Session ID: a67478a8-04b3-41de-a64b-4d0629105f32
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at steps.Login.user_clicks_the_Login_button_and_enters_and(Login.java:57)
-	at ?.User clicks the Login button and enters "Abcd@yahoo.com" and "abcd@123"(file:src/test/resources/features/Login.feature:17)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at steps.AddToCart.user_clicks_on_Add_to_Bag_for_a_Product(AddToCart.java:38)
+	at ?.User clicks on Add to Bag for a Product(file:src/test/resources/features/Myntra_AddToCart.feature:4)
 </textarea>
-				</li>
-				<li test-id='20' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="Login.a_message_is_shown_saying_Incorrect_User_id_and_password()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then A message is shown saying Incorrect User id and password</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-			</ul>
+		</li>
+		<li test-id='26' class='node then skip' status='skip'>
+			<div class="step-name" title="AddToCart.the_Product_gets_added_in_Cart()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then The Product gets added in Cart</div>
+			<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
 					</div>
 				</li>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='22'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='27'>
 					<div class='test-heading'>
-						<span class='test-name'>Add to Cart functionality for Products listed in app</span>
-						<span class='test-time'>May 21, 2020 07:11:01 PM</span>
+						<span class='test-name'>Sorting Option</span>
+						<span class='test-time'>May 24, 2020 12:15:53 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -320,22 +360,26 @@ Session ID: a67478a8-04b3-41de-a64b-4d0629105f32
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='23' status='pass'>
-	<span class='duration right label'>0h 1m 14s+287ms</span>
+<div class='scenario node' test-id='28' status='pass'>
+	<span class='duration right label'>0h 1m 8s+29ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: User adds a Product to Bag</div>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: User is Sorting Products with Prices low to high</div>
 	</div>
 	<ul class='steps'>
-		<li test-id='24' class='node given pass' status='pass'>
-			<div class="step-name" title="AddToCart.user_is_Successfully_logged_into_the_application()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is Successfully logged into the application.</div>
+		<li test-id='29' class='node given pass' status='pass'>
+			<div class="step-name" title="Login.user_is_on_Myntra_Home_Page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is on Myntra Home Page</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='25' class='node when pass' status='pass'>
-			<div class="step-name" title="AddToCart.user_clicks_on_Add_to_Bag_for_a_Product()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When User clicks on Add to Bag for a Product</div>
+		<li test-id='30' class='node when pass' status='pass'>
+			<div class="step-name" title="Sorting.user_Clicks_on_a_Product_Category()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When User Clicks on a Product Category</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='26' class='node then pass' status='pass'>
-			<div class="step-name" title="AddToCart.the_Product_gets_added_in_Cart()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then The Product gets added in Cart</div>
+		<li test-id='31' class='node and pass' status='pass'>
+			<div class="step-name" title="Sorting.user_Clicks_on_Sort_Option_and_choose_price_low_to_high()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Clicks on Sort Option and choose price low to high</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='32' class='node then pass' status='pass'>
+			<div class="step-name" title="Sorting.products_get_sorted_from_lowest_to_highest_price_products()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Products get sorted from lowest to highest price products</div>
 			<div class="node-step"></div>
 		</li>
 	</ul>
@@ -405,27 +449,27 @@ Session ID: a67478a8-04b3-41de-a64b-4d0629105f32
 								</thead>
 								<tbody>
 									<tr>
-										<td>May 21, 2020 07:08:17 PM</td>
+										<td>May 24, 2020 12:12:27 PM</td>
 										<td class='linked' test-id='2'>Successful login with Valid Credentials</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>May 21, 2020 07:08:17 PM</td>
+										<td>May 24, 2020 12:12:27 PM</td>
 										<td class='linked' test-id='3'>Successful login with Valid Credentials</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>May 21, 2020 07:09:32 PM</td>
+										<td>May 24, 2020 12:13:30 PM</td>
 										<td class='linked' test-id='9'>Login Failure with Invalid Credentials</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>May 21, 2020 07:09:32 PM</td>
+										<td>May 24, 2020 12:13:30 PM</td>
 										<td class='linked' test-id='10'>Login Failure with Invalid Credentials</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>May 21, 2020 07:10:29 PM</td>
+										<td>May 24, 2020 12:14:21 PM</td>
 										<td class='linked' test-id='16'>Login Failure with Invalid Credentials</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
@@ -464,7 +508,7 @@ Session ID: a67478a8-04b3-41de-a64b-4d0629105f32
 				<li class='exception displayed active'>
 					<div class='exception-heading'>
 						<span class='exception-name'>junit.framework.ComparisonFailure</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
 					</div>
 					<div class='exception-content hide'>
 						<div class='exception-tests'>
@@ -478,10 +522,22 @@ Session ID: a67478a8-04b3-41de-a64b-4d0629105f32
 								</thead>
 								<tbody>
 									<tr>
-										<td>May 21, 2020 07:09:46 PM</td>
+										<td>May 24, 2020 12:13:46 PM</td>
 										<td class='linked' test-id='14'>Then A message is shown saying Incorrect User id and password</td>
 										<td>
-											<textarea disabled class="code-block">junit.framework.ComparisonFailure: expected:<[Incorrect user id or password]> but was:<[Too many failed password attempts, please try after 7 minutes]>
+											<textarea disabled class="code-block">junit.framework.ComparisonFailure: expected:<[Incorrect user id or password]> but was:<[Too many failed password attempts, please try after 23 minutes]>
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at steps.Login.a_message_is_shown_saying_Incorrect_User_id_and_password(Login.java:73)
+	at ?.A message is shown saying Incorrect User id and password(file:src/test/resources/features/Login.feature:18)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>May 24, 2020 12:14:39 PM</td>
+										<td class='linked' test-id='20'>Then A message is shown saying Incorrect User id and password</td>
+										<td>
+											<textarea disabled class="code-block">junit.framework.ComparisonFailure: expected:<[Incorrect user id or password]> but was:<[Too many failed password attempts, please try after 23 minutes]>
 	at junit.framework.Assert.assertEquals(Assert.java:100)
 	at junit.framework.Assert.assertEquals(Assert.java:107)
 	at steps.Login.a_message_is_shown_saying_Incorrect_User_id_and_password(Login.java:73)
@@ -511,17 +567,17 @@ Session ID: a67478a8-04b3-41de-a64b-4d0629105f32
 								</thead>
 								<tbody>
 									<tr>
-										<td>May 21, 2020 07:10:29 PM</td>
-										<td class='linked' test-id='19'>When User clicks the Login button and enters "Abcd@yahoo.com" and "abcd@123"</td>
+										<td>May 24, 2020 12:15:27 PM</td>
+										<td class='linked' test-id='25'>When User clicks on Add to Bag for a Product</td>
 										<td>
 											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-2ITHABKP', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+System info: host: 'LAPTOP-2ITHABKP', ip: '192.168.42.130', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: C:\Users\kunal\eclipse-work..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, databaseEnabled: false, desired: {app: C:\Users\kunal\eclipse-work..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, deviceName: NDD4C18926014588, platformName: android, platformVersion: 10.0}, deviceApiLevel: 29, deviceManufacturer: HUAWEI, deviceModel: JSN-L42, deviceName: NDD4C18926014588, deviceScreenDensity: 480, deviceScreenSize: 1080x2340, deviceUDID: NDD4C18926014588, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 85, takesScreenshot: true, viewportRect: {height: 2052, left: 0, top: 85, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: a67478a8-04b3-41de-a64b-4d0629105f32
-*** Element info: {Using=id, value=com.myntra.android:id/et_email_or_phone}
+Capabilities {app: C:\Users\kunal\git\Myntra_a..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, databaseEnabled: false, desired: {app: C:\Users\kunal\git\Myntra_a..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, deviceName: NDD4C18926014588, platformName: android, platformVersion: 10.0}, deviceApiLevel: 29, deviceManufacturer: HUAWEI, deviceModel: JSN-L42, deviceName: NDD4C18926014588, deviceScreenDensity: 480, deviceScreenSize: 1080x2340, deviceUDID: NDD4C18926014588, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 85, takesScreenshot: true, viewportRect: {height: 2052, left: 0, top: 85, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: bd4f62ff-4937-42d4-aa93-44f5694cbed3
+*** Element info: {Using=xpath, value=(//android.widget.TextView[@content-desc="text_brand"])[1]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -540,12 +596,12 @@ Session ID: a67478a8-04b3-41de-a64b-4d0629105f32
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at steps.Login.user_clicks_the_Login_button_and_enters_and(Login.java:57)
-	at ?.User clicks the Login button and enters "Abcd@yahoo.com" and "abcd@123"(file:src/test/resources/features/Login.feature:17)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at steps.AddToCart.user_clicks_on_Add_to_Bag_for_a_Product(AddToCart.java:38)
+	at ?.User clicks on Add to Bag for a Product(file:src/test/resources/features/Myntra_AddToCart.feature:4)
 </textarea>
 										</td>
 									</tr>
@@ -571,37 +627,37 @@ Session ID: a67478a8-04b3-41de-a64b-4d0629105f32
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>12</div>
+					<div class='panel-lead'>16</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>May 21, 2020 07:06:36 PM</div>
+					<div class='panel-lead'>May 24, 2020 12:11:51 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>May 21, 2020 07:12:16 PM</div>
+			 		<div class='panel-lead'>May 24, 2020 12:17:01 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 5m 40s+146ms</div>
+					<div class='panel-lead'>0h 5m 10s+635ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -636,39 +692,39 @@ Session ID: a67478a8-04b3-41de-a64b-4d0629105f32
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 2,
+                parentCount: 3,
 				passParent: 1,
-				failParent: 1,
+				failParent: 2,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
-				childCount: 4,
+				exceptionsParent: 2,
+				childCount: 5,
 				passChild: 2,
-				failChild: 2,
+				failChild: 3,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 2,
-				grandChildCount: 12,
-				passGrandChild: 9,
-				failGrandChild: 2,
+				exceptionsChild: 3,
+				grandChildCount: 16,
+				passGrandChild: 12,
+				failGrandChild: 3,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
 				skipGrandChild: 1,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 3,
+				exceptionsGrandChild: 4,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "Login on Myntra App":160.587,"Add to Cart functionality for Products listed in app":74.287
+			        "Login on Myntra App":133.702,"Add to Cart functionality for Products listed in app":70.271,"Sorting Option":68.029
 			};
 		</script>
 	

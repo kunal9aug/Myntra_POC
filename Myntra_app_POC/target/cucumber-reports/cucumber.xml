@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="331.553951">
-    <testcase classname="Login on Myntra App" name="Successful login with Valid Credentials" time="118.716468">
+<testsuite failures="3" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="309.246841">
+    <testcase classname="Login on Myntra App" name="Successful login with Valid Credentials" time="66.546335">
         <system-out>
             <![CDATA[Given User is on Myntra Home Page...........................................passed
 When User clicks the Login button and enters "Rashikas331@gmail.com" and "Demo@123".passed
@@ -8,14 +8,14 @@ Then User Should be able to login...........................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Login on Myntra App" name="Login Failure with Invalid Credentials" time="68.064905">
-        <failure message="junit.framework.ComparisonFailure: expected:&lt;[Incorrect user id or password]&gt; but was:&lt;[Too many failed password attempts, please try after 7 minutes]&gt;&#13;&#10;&#9;at junit.framework.Assert.assertEquals(Assert.java:100)&#13;&#10;&#9;at junit.framework.Assert.assertEquals(Assert.java:107)&#13;&#10;&#9;at steps.Login.a_message_is_shown_saying_Incorrect_User_id_and_password(Login.java:73)&#13;&#10;&#9;at ✽.A message is shown saying Incorrect User id and password(file:src/test/resources/features/Login.feature:18)&#13;&#10;">
+    <testcase classname="Login on Myntra App" name="Login Failure with Invalid Credentials" time="51.307199">
+        <failure message="junit.framework.ComparisonFailure: expected:&lt;[Incorrect user id or password]&gt; but was:&lt;[Too many failed password attempts, please try after 23 minutes]&gt;&#13;&#10;&#9;at junit.framework.Assert.assertEquals(Assert.java:100)&#13;&#10;&#9;at junit.framework.Assert.assertEquals(Assert.java:107)&#13;&#10;&#9;at steps.Login.a_message_is_shown_saying_Incorrect_User_id_and_password(Login.java:73)&#13;&#10;&#9;at ✽.A message is shown saying Incorrect User id and password(file:src/test/resources/features/Login.feature:18)&#13;&#10;">
             <![CDATA[Given User is on Myntra Home Page...........................................passed
 When User clicks the Login button and enters "xyz@outlook.com" and "Razz@123".passed
 Then A message is shown saying Incorrect User id and password...............failed
 
 StackTrace:
-junit.framework.ComparisonFailure: expected:<[Incorrect user id or password]> but was:<[Too many failed password attempts, please try after 7 minutes]>
+junit.framework.ComparisonFailure: expected:<[Incorrect user id or password]> but was:<[Too many failed password attempts, please try after 23 minutes]>
 	at junit.framework.Assert.assertEquals(Assert.java:100)
 	at junit.framework.Assert.assertEquals(Assert.java:107)
 	at steps.Login.a_message_is_shown_saying_Incorrect_User_id_and_password(Login.java:73)
@@ -23,21 +23,36 @@ junit.framework.ComparisonFailure: expected:<[Incorrect user id or password]> bu
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Login on Myntra App" name="Login Failure with Invalid Credentials 2" time="70.47727">
-        <failure message="org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LAPTOP-2ITHABKP', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'&#10;Driver info: io.appium.java_client.android.AndroidDriver&#10;Capabilities {app: C:\Users\kunal\eclipse-work..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, databaseEnabled: false, desired: {app: C:\Users\kunal\eclipse-work..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, deviceName: NDD4C18926014588, platformName: android, platformVersion: 10.0}, deviceApiLevel: 29, deviceManufacturer: HUAWEI, deviceModel: JSN-L42, deviceName: NDD4C18926014588, deviceScreenDensity: 480, deviceScreenSize: 1080x2340, deviceUDID: NDD4C18926014588, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 85, takesScreenshot: true, viewportRect: {height: 2052, left: 0, top: 85, width: 1080}, warnings: {}, webStorageEnabled: false}&#10;Session ID: a67478a8-04b3-41de-a64b-4d0629105f32&#10;*** Element info: {Using=id, value=com.myntra.android:id/et_email_or_phone}&#13;&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#13;&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)&#13;&#10;&#9;at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)&#13;&#10;&#9;at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;&#10;&#9;at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)&#13;&#10;&#9;at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)&#13;&#10;&#9;at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)&#13;&#10;&#9;at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)&#13;&#10;&#9;at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)&#13;&#10;&#9;at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)&#13;&#10;&#9;at steps.Login.user_clicks_the_Login_button_and_enters_and(Login.java:57)&#13;&#10;&#9;at ✽.User clicks the Login button and enters &quot;Abcd@yahoo.com&quot; and &quot;abcd@123&quot;(file:src/test/resources/features/Login.feature:17)&#13;&#10;">
+    <testcase classname="Login on Myntra App" name="Login Failure with Invalid Credentials 2" time="53.071618">
+        <failure message="junit.framework.ComparisonFailure: expected:&lt;[Incorrect user id or password]&gt; but was:&lt;[Too many failed password attempts, please try after 23 minutes]&gt;&#13;&#10;&#9;at junit.framework.Assert.assertEquals(Assert.java:100)&#13;&#10;&#9;at junit.framework.Assert.assertEquals(Assert.java:107)&#13;&#10;&#9;at steps.Login.a_message_is_shown_saying_Incorrect_User_id_and_password(Login.java:73)&#13;&#10;&#9;at ✽.A message is shown saying Incorrect User id and password(file:src/test/resources/features/Login.feature:18)&#13;&#10;">
             <![CDATA[Given User is on Myntra Home Page...........................................passed
-When User clicks the Login button and enters "Abcd@yahoo.com" and "abcd@123".failed
-Then A message is shown saying Incorrect User id and password...............skipped
+When User clicks the Login button and enters "Abcd@yahoo.com" and "abcd@123".passed
+Then A message is shown saying Incorrect User id and password...............failed
+
+StackTrace:
+junit.framework.ComparisonFailure: expected:<[Incorrect user id or password]> but was:<[Too many failed password attempts, please try after 23 minutes]>
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at steps.Login.a_message_is_shown_saying_Incorrect_User_id_and_password(Login.java:73)
+	at ✽.A message is shown saying Incorrect User id and password(file:src/test/resources/features/Login.feature:18)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Add to Cart functionality for Products listed in app" name="User adds a Product to Bag" time="70.275166">
+        <failure message="org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LAPTOP-2ITHABKP', ip: '192.168.42.130', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'&#10;Driver info: io.appium.java_client.android.AndroidDriver&#10;Capabilities {app: C:\Users\kunal\git\Myntra_a..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, databaseEnabled: false, desired: {app: C:\Users\kunal\git\Myntra_a..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, deviceName: NDD4C18926014588, platformName: android, platformVersion: 10.0}, deviceApiLevel: 29, deviceManufacturer: HUAWEI, deviceModel: JSN-L42, deviceName: NDD4C18926014588, deviceScreenDensity: 480, deviceScreenSize: 1080x2340, deviceUDID: NDD4C18926014588, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 85, takesScreenshot: true, viewportRect: {height: 2052, left: 0, top: 85, width: 1080}, warnings: {}, webStorageEnabled: false}&#10;Session ID: bd4f62ff-4937-42d4-aa93-44f5694cbed3&#10;*** Element info: {Using=xpath, value=(//android.widget.TextView[@content-desc=&quot;text_brand&quot;])[1]}&#13;&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#13;&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)&#13;&#10;&#9;at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)&#13;&#10;&#9;at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;&#10;&#9;at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)&#13;&#10;&#9;at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)&#13;&#10;&#9;at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)&#13;&#10;&#9;at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)&#13;&#10;&#9;at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)&#13;&#10;&#9;at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)&#13;&#10;&#9;at steps.AddToCart.user_clicks_on_Add_to_Bag_for_a_Product(AddToCart.java:38)&#13;&#10;&#9;at ✽.User clicks on Add to Bag for a Product(file:src/test/resources/features/Myntra_AddToCart.feature:4)&#13;&#10;">
+            <![CDATA[Given User is Successfully logged into the application......................passed
+When User clicks on Add to Bag for a Product................................failed
+Then The Product gets added in Cart.........................................skipped
 
 StackTrace:
 org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-2ITHABKP', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+System info: host: 'LAPTOP-2ITHABKP', ip: '192.168.42.130', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: C:\Users\kunal\eclipse-work..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, databaseEnabled: false, desired: {app: C:\Users\kunal\eclipse-work..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, deviceName: NDD4C18926014588, platformName: android, platformVersion: 10.0}, deviceApiLevel: 29, deviceManufacturer: HUAWEI, deviceModel: JSN-L42, deviceName: NDD4C18926014588, deviceScreenDensity: 480, deviceScreenSize: 1080x2340, deviceUDID: NDD4C18926014588, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 85, takesScreenshot: true, viewportRect: {height: 2052, left: 0, top: 85, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: a67478a8-04b3-41de-a64b-4d0629105f32
-*** Element info: {Using=id, value=com.myntra.android:id/et_email_or_phone}
+Capabilities {app: C:\Users\kunal\git\Myntra_a..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, databaseEnabled: false, desired: {app: C:\Users\kunal\git\Myntra_a..., appActivity: com.myntra.android.activiti..., appPackage: com.myntra.android, automationName: Appium, deviceName: NDD4C18926014588, platformName: android, platformVersion: 10.0}, deviceApiLevel: 29, deviceManufacturer: HUAWEI, deviceModel: JSN-L42, deviceName: NDD4C18926014588, deviceScreenDensity: 480, deviceScreenSize: 1080x2340, deviceUDID: NDD4C18926014588, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 85, takesScreenshot: true, viewportRect: {height: 2052, left: 0, top: 85, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: bd4f62ff-4937-42d4-aa93-44f5694cbed3
+*** Element info: {Using=xpath, value=(//android.widget.TextView[@content-desc="text_brand"])[1]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -56,20 +71,21 @@ Session ID: a67478a8-04b3-41de-a64b-4d0629105f32
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at steps.Login.user_clicks_the_Login_button_and_enters_and(Login.java:57)
-	at ✽.User clicks the Login button and enters "Abcd@yahoo.com" and "abcd@123"(file:src/test/resources/features/Login.feature:17)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at steps.AddToCart.user_clicks_on_Add_to_Bag_for_a_Product(AddToCart.java:38)
+	at ✽.User clicks on Add to Bag for a Product(file:src/test/resources/features/Myntra_AddToCart.feature:4)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Add to Cart functionality for Products listed in app" name="User adds a Product to Bag" time="74.295308">
+    <testcase classname="Sorting Option" name="User is Sorting Products with Prices low to high" time="68.046523">
         <system-out>
-            <![CDATA[Given User is Successfully logged into the application......................passed
-When User clicks on Add to Bag for a Product................................passed
-Then The Product gets added in Cart.........................................passed
+            <![CDATA[Given User is on Myntra Home Page...........................................passed
+When User Clicks on a Product Category......................................passed
+And User Clicks on Sort Option and choose price low to high.................passed
+Then Products get sorted from lowest to highest price products..............passed
 ]]>
         </system-out>
     </testcase>
